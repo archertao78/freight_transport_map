@@ -20,11 +20,11 @@ app = dash.Dash(
 )
 
 # 读取地图矢量文件
-with open("./中华人民共和国.json", encoding="utf-8") as f:
+with open(r"D:\git\freight_transport_map\freight-transport-map/中华人民共和国.json", encoding="utf-8") as f:
     regions = json.load(f)
 
 # 读取示例货运计划数据
-freight_plans = pd.read_csv("./示例数据.csv")
+freight_plans = pd.read_csv(r"D:\git\freight_transport_map\freight-transport-map/示例数据.csv")
 
 app.layout = fuc.FefferyTopProgress(
     fac.AntdCenter(
